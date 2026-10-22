@@ -8,6 +8,17 @@ Funciones: cursos y contenido (archivos y enlaces), tareas (ver estado, entregar
 calificaciones, cuestionarios (solo ver intentos), foros (leer y responder), mensajes
 (leer y enviar), notificaciones, calendario, participantes, perfiles y búsqueda de cursos.
 
+## Capturas
+
+Con datos de ejemplo (`tools/mock-moodle.js`), a 320 px de ancho como la pantalla de la consola.
+
+| | | | |
+|:-:|:-:|:-:|:-:|
+| <img src="docs/login.jpg" width="160"><br>Login | <img src="docs/inicio.jpg" width="160"><br>Inicio | <img src="docs/contenido.jpg" width="160"><br>Contenido | <img src="docs/tareas.jpg" width="160"><br>Tareas |
+| <img src="docs/notas.jpg" width="160"><br>Notas | <img src="docs/foro.jpg" width="160"><br>Foro | <img src="docs/mensajes.jpg" width="160"><br>Mensajes | <img src="docs/calendario.jpg" width="160"><br>Calendario |
+
+Para regenerarlas: `node tools/mock-moodle.js` y `MOODLE_URL=http://localhost:8090/ node server.js`, con cualquier CIF/PIN.
+
 ## Probar local
 
 ```bash

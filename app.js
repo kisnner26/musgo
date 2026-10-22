@@ -79,14 +79,14 @@ async function post(url, fields) {
 }
 
 async function login(inst, cif, pin) {
-  const base = INSTANCES[inst].url;
+  const base = process.env.MOODLE_URL || INSTANCES[inst].url;
   const r = await post(base + 'login/token.php', { username: cif, password: pin, service: SERVICE });
   if (!r.token) throw new MoodleError(r.error || 'Moodle no devolvió token.', r.errorcode);
   return r.token;
 }
 
 function client(sess) {
-  const base = INSTANCES[sess.inst].url;
+  const base = process.env.MOODLE_URL || INSTANCES[sess.inst].url;
   return {
     base,
     async call(fn, params) {
